@@ -19,24 +19,13 @@ export default function App() {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <View style={{ flex: 1 }}>
       <MapView
         ref={mapRef}
-        style={styles.map}
+        style={StyleSheet.absoluteFill}
         provider={PROVIDER_GOOGLE}
         initialRegion={INITIAL_REGION}
-        region={INITIAL_REGION} // Adicione esta linha
       />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  map: {
-    width: '100%',
-    height: '100%',
-  },
-});
